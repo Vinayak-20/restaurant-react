@@ -1,0 +1,102 @@
+API CALL IN JS
+................................
+
+AJAX
+  -XMLhttp
+  -fetch
+  -asynch await
+
+  ..........................
+  useEffect hook is used instead of NgOnit
+  ........................................
+  Redirection in react
+
+ npm i react-router-dom
+
+ import {BrowserRoute as router,- all routing need components
+ Routes,- to set paths for each components
+ Route- more than one path
+ } from 'react-router-dom';
+
+
+
+
+
+
+
+REDUX
+-------
+
+
+coupling= so many parent child relations/combinations(like pyrimid structure)
+
+props drilling = in coupling if any intermediate componet have any errors, all other chinds will not work
+
+ To avoid props drilling we need to reduce coupling and make all the component independent
+
+  For this react introduced a new technology => state managment technology -REDUX
+
+
+  REDUX process
+  -------------
+
+   create a new js file to keep the states, all the components can access the js file 
+
+   The components only can access the data from the js file , but they can't update the data from js file
+
+
+
+
+   data.js====>Component------>(dispatch request)------>Action----->(response as payload)------>Reducer
+
+
+
+
+
+
+
+   Action= a file with all the logic to update the state
+   Dispatch  = method used to dispatch the logic in action file when the component need state updation
+
+   Reducer = update the datas in js file according to the payload response from the action file
+
+
+   we need some libararies to use REDUX
+
+   -----------------------------------------
+
+   1) REDUX
+
+   2) React-REDUX
+
+   3) REDUX-THUNK 
+
+
+createStore()  -method used to create store in js file
+                -expect two arguments 
+                      1. a Reducer
+                      2. a Middileware  (used to make synchronous redux into asynchronous)
+
+applyMiddleware()- method in redux to apply Middleware        
+
+combineReducers()- method in REDUX used to combine all reducers in js file 
+
+thunk - in REDUX-THUNK , used to create Middleware
+
+
+
+1. create store 
+2. apply store in idex.js 
+      -provider -its a tag used topass the store 
+
+
+
+
+AXIOS  -module used to make http methods
+            -npm i axios
+
+
+            useDispatch -hook used to dispatch actions from components -(from react redux)
+
+
+to access data from store to component -useSelector -its a hook              
